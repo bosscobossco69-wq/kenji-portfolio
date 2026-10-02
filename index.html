@@ -54,8 +54,31 @@
 .tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tech-card{border:1px solid var(--line);border-radius:20px;background:var(--panel);padding:24px}.tech-card b{display:block;margin:10px 0 4px}.tech-card span{color:var(--muted);font-size:13px}.demo-panel{border:1px solid var(--line);border-radius:26px;background:var(--panel);padding:38px;display:flex;justify-content:space-between;align-items:center;gap:30px}.demo-panel h2{margin:8px 0}.demo-url{font-family:ui-monospace,monospace;color:#aaa;font-size:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#0d0d10}
 @media(max-width:800px){.tech-grid{grid-template-columns:1fr 1fr}.demo-panel{display:block}}
 @media(max-width:520px){.tech-grid{grid-template-columns:1fr}}
-</style></style></head><body>
-<header><div class="c nav"><a class="logo" href="#">KENJI</a><nav class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+</style></style>
+<style>
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.price-card{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:25px;display:flex;flex-direction:column;min-height:310px}
+.price-card.featured{border-color:var(--accent)}.price-card{cursor:pointer;transition:transform .18s ease,border-color .18s ease}.price-card:hover{transform:translateY(-3px)}.price-card:active{transform:translateY(-1px)}
+.price-card h3{font-size:23px;margin:12px 0 6px}
+.price{font-size:38px;font-weight:900;letter-spacing:-.04em;margin:12px 0}
+.price small{font-size:12px;color:var(--muted);font-weight:500}
+.price-ref{font-size:12px;color:var(--muted)}
+.price-card ul{padding-left:18px;color:#bbb;font-size:13px;line-height:1.9;flex:1}
+.order-note{margin-top:25px;color:var(--muted);font-size:13px}
+.payment-panel{margin-top:35px;border:1px solid var(--line);border-radius:26px;background:var(--panel);padding:30px}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.payment-box{border:1px solid var(--line);border-radius:18px;padding:20px}
+.payment-box b{display:block;margin-bottom:7px}
+.payment-box span{color:var(--muted);font-size:13px}
+.order-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.order-form input,.order-form select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#0d0d10;color:white;font:inherit;outline:none}
+.order-form .full{grid-column:1/-1}
+.order-result{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px;background:#0d0d10;color:#bbb;font-size:13px;display:none}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pricing-grid,.payment-grid,.order-form{grid-template-columns:1fr}.order-form .full{grid-column:auto}}
+</style>
+</head><body>
+<header><div class="c nav"><a class="logo" href="#">KENJI</a><nav class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
 <main>
 <section class="hero"><div class="c"><div class="ey">WEB DEVELOPER & DIGITAL SYSTEMS</div><h1>I build modern websites and custom web applications.</h1><p>Independent developer focused on polished interfaces, real product flows and practical digital systems for businesses.</p><a class="btn primary" href="#work">VIEW MY WORK</a><a class="btn" href="#contact">CONTACT</a></div></section>
 <section id="work"><div class="c"><div class="head"><div class="ey">SELECTED WORK</div><h2>Built, not just designed.</h2><p class="muted">A marketplace product with customer, seller and administration experiences.</p></div><div class="work"><div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="viewlabel">POKÉMON TREASURE</span></div>
@@ -182,7 +205,7 @@
   </div>
 
   <div class="project-actions">
-    <a class="btn primary" href="#contact">START A PROJECT</a><a class="btn" href="https://pok-mon-treasure-r70t.vercel.app" target="_blank" rel="noopener">OPEN LIVE DEMO →</a>
+    <a class="btn primary" href="#contact">START A PROJECT</a><a class="btn" href="#live-demo">OPEN LIVE DEMO →</a>
     <button class="btn close-project" onclick="closeProject()">BACK TO PORTFOLIO</button>
   </div>
 </div>
@@ -194,15 +217,96 @@
 <div class="tech-card"><div class="num">FRONTEND</div><b>Responsive Interface</b><span>HTML · CSS · JavaScript</span></div>
 <div class="tech-card"><div class="num">BACKEND</div><b>Data & Services</b><span>Supabase · Database</span></div>
 <div class="tech-card"><div class="num">AUTH</div><b>User Access</b><span>Email / OTP · Authentication</span></div>
-<div class="tech-card"><div class="num">DEPLOYMENT</div><b>Web Delivery</b><span>Vercel deployment</span></div>
+<div class="tech-card"><div class="num">DEPLOYMENT</div><b>Web Delivery</b><span>Vercel-ready workflow</span></div>
 </div>
 </div>
 </section>
 <section id="live-demo">
 <div class="c">
 <div class="demo-panel">
-<div><div class="ey">LIVE DEMO</div><h2>Explore the actual product.</h2><p class="muted">The live product is deployed and available for clients to explore.</p></div>
-<div><div class="demo-url">pok-mon-treasure-r70t.vercel.app</div><a class="btn primary" href="https://pok-mon-treasure-r70t.vercel.app" target="_blank" rel="noopener" style="margin-top:12px">OPEN LIVE DEMO ↗</a></div>
+<div><div class="ey">LIVE DEMO</div><h2>Explore the actual product.</h2><p class="muted">When the production/demo URL is ready, this button will take clients directly to Pokémon Treasure.</p></div>
+<div><div class="demo-url">pok-mon-treasure-r70t.vercel.app</div><a class="btn primary" href="https://pok-mon-treasure-r70t.vercel.app/" target="_blank" rel="noopener noreferrer" style="margin-top:12px">OPEN LIVE DEMO →</a></div>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="c">
+<div class="head">
+<div class="ey">PRICING</div>
+<h2>Clear starting prices.</h2>
+<p class="muted">USD is the base reference. MYR and USDT are shown for convenience. Custom requirements can be quoted separately.</p><p class="muted" style="font-size:12px;margin-top:8px">Tap any package or the order button to select it and continue.</p>
+</div>
+
+<div class="pricing-grid">
+<article class="price-card" data-package="Landing Page" data-price="80" onclick="selectPackageAndScroll('Landing Page',80)">
+<div class="num">01 / STARTER</div>
+<h3>Landing Page</h3>
+<div class="price">$80 <small>USD</small></div>
+<div class="price-ref">≈ MYR 320 · 80 USDT</div>
+<ul><li>Responsive single-page design</li><li>Modern UI</li><li>Contact / WhatsApp CTA</li></ul>
+<a class="btn primary" href="#payment" onclick="event.stopPropagation();selectPackageAndScroll('Landing Page',80)">ORDER THIS PACKAGE</a>
+</article>
+
+<article class="price-card featured" data-package="Business Website" data-price="180" onclick="selectPackageAndScroll('Business Website',180)">
+<div class="num">02 / BUSINESS</div>
+<h3>Business Website</h3>
+<div class="price">$180 <small>USD</small></div>
+<div class="price-ref">≈ MYR 720 · 180 USDT</div>
+<ul><li>Professional multi-section website</li><li>Responsive design</li><li>Contact & business information</li></ul>
+<a class="btn primary" href="#payment" onclick="event.stopPropagation();selectPackageAndScroll('Business Website',180)">ORDER THIS PACKAGE</a>
+</article>
+
+<article class="price-card" data-package="Web Application" data-price="350" onclick="selectPackageAndScroll('Web Application',350)">
+<div class="num">03 / APPLICATION</div>
+<h3>Web Application</h3>
+<div class="price">$350 <small>USD</small></div>
+<div class="price-ref">≈ MYR 1,400 · 350 USDT</div>
+<ul><li>Custom user interface</li><li>User flows & authentication</li><li>Database / application features</li></ul>
+<a class="btn primary" href="#payment" onclick="event.stopPropagation();selectPackageAndScroll('Web Application',350)">ORDER THIS PACKAGE</a>
+</article>
+
+<article class="price-card" data-package="Marketplace / Custom System" data-price="600" onclick="selectPackageAndScroll('Marketplace / Custom System',600)">
+<div class="num">04 / CUSTOM</div>
+<h3>Marketplace / Custom System</h3>
+<div class="price">$600+ <small>USD</small></div>
+<div class="price-ref">≈ MYR 2,400+ · 600+ USDT</div>
+<ul><li>Custom product architecture</li><li>Buyer / seller / admin flows</li><li>Quote based on requirements</li></ul>
+<a class="btn primary" href="#payment" onclick="event.stopPropagation();selectPackageAndScroll('Marketplace / Custom System',600)">START A QUOTE</a>
+</article>
+</div>
+</div>
+</section>
+
+<section id="payment">
+<div class="c">
+<div class="head">
+<div class="ey">ORDER & PAYMENT</div>
+<h2>Start your project.</h2>
+<p class="muted">Choose a package, create an order reference, then contact KENJI through WhatsApp. Payment details are provided after the package is confirmed.</p><p class="muted" style="font-size:12px">Selected package and price will appear automatically when you tap a package above.</p>
+</div>
+
+<div class="payment-panel">
+<div class="payment-grid">
+<div class="payment-box"><b>Wise</b><span>International transfer. Details provided after package confirmation.</span></div>
+<div class="payment-box"><b>Malaysia Bank Transfer</b><span>MYR local transfer. Bank details provided after package confirmation.</span></div>
+<div class="payment-box"><b>USDT</b><span>TRC20 / BEP20. Wallet details provided after package confirmation.</span></div>
+<div class="payment-box"><b>WhatsApp</b><span>Confirm your package and receive your order/payment instructions.</span></div>
+</div>
+
+<div class="order-form">
+<input id="orderPackage" class="full" placeholder="Selected package" readonly>
+<input id="orderPrice" placeholder="Price" readonly>
+<select id="paymentMethod">
+<option>Wise</option>
+<option>Malaysia Bank Transfer (MYR)</option>
+<option>USDT — TRC20</option>
+<option>USDT — BEP20</option>
+</select>
+<input id="orderName" class="full" placeholder="Your name">
+<button class="btn primary full" type="button" onclick="createOrder()">CREATE ORDER & CONTACT WHATSAPP</button>
+</div>
+<div id="orderResult" class="order-result"></div>
 </div>
 </div>
 </section>
@@ -217,7 +321,7 @@
 <textarea id="message" required placeholder="Tell me about your project..."></textarea>
 <button class="btn primary" type="submit">SEND PROJECT INQUIRY</button>
 </form>
-<div class="contactlinks"><a href="mailto:kenjing3073@gmail.com">Email</a><a href="https://wa.me/601136582368" target="_blank">WhatsApp</a></div>
+<div class="contactlinks"><a href="mailto:kenjing3073@gmail.com">Email</a><a href="https://wa.me/message/W63YOJQ2QSNOK1" target="_blank">WhatsApp</a><a href="tel:+60108207728">+60 10-820 7728</a></div>
 </div></div></section>
 </main><footer class="c"><span>© 2026 KENJI</span><span>WEB DEVELOPER · DIGITAL SYSTEMS</span></footer><script>document.querySelectorAll(".gt").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".gt").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".shot").forEach(x=>x.classList.remove("active"));btn.classList.add("active");document.querySelector('.shot[data-shot="'+btn.dataset.target+'"]').classList.add("active")}));</script><script>
 function sendInquiry(e){
@@ -239,6 +343,65 @@ function openProject(){
 function closeProject(){
   document.getElementById("project-detail").classList.remove("open");
   document.getElementById("work").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+<script>
+let selectedPackage = "Business Website";
+let selectedPrice = 180;
+window.addEventListener("DOMContentLoaded", function(){ selectPackage(selectedPackage, selectedPrice); });
+
+function selectPackage(name, price){
+  selectedPackage = name;
+  selectedPrice = price;
+  const p = document.getElementById("orderPackage");
+  const pr = document.getElementById("orderPrice");
+  if(p) p.value = name;
+  if(pr) pr.value = "$" + price + " USD / " + price + " USDT";
+  document.querySelectorAll(".price-card").forEach(function(card){
+    card.style.borderColor = "";
+  });
+  const selected = document.querySelector('.price-card[data-package="' + CSS.escape(name) + '"]');
+  if(selected) selected.style.borderColor = "var(--accent)";
+}
+
+function selectPackageAndScroll(name, price){
+  selectPackage(name, price);
+  const payment = document.getElementById("payment");
+  if(payment) payment.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+function createOrder(){
+  const name = document.getElementById("orderName").value.trim();
+  const method = document.getElementById("paymentMethod").value;
+  const result = document.getElementById("orderResult");
+  if(!name){
+    result.style.display = "block";
+    result.textContent = "Please enter your name first.";
+    return;
+  }
+
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth()+1).padStart(2,"0");
+  const d = String(now.getDate()).padStart(2,"0");
+  const orderId = "KJ-" + y + m + d + "-" + String(Math.floor(100 + Math.random()*900));
+
+  const msg =
+    "Hi Kenji, I’d like to order your " + selectedPackage +
+    " package.\\n\\n" +
+    "Order ID: " + orderId + "\\n" +
+    "Price: $" + selectedPrice + " USD / " + selectedPrice + " USDT\\n" +
+    "Payment method: " + method + "\\n" +
+    "Name: " + name + "\\n\\n" +
+    "Please provide the payment details and next steps.";
+
+  result.style.display = "block";
+  result.innerHTML = "<b>Order ID:</b> " + orderId +
+    "<br><br>Your WhatsApp message is ready. Tap the button below to continue.";
+
+  const wa = "https://wa.me/message/W63YOJQ2QSNOK1";
+  window.open(wa, "_blank");
 }
 </script>
 </body></html>
